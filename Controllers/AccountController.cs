@@ -18,8 +18,12 @@ namespace aspconsoleapp.Controllers
 
         }
 
-
-        
+       [AllowAnonymous]     // This enables user to accress this controller to register-page:
+       public IActionResult Register()
+       {
+           return View();
+       }
+              
 
 
 
