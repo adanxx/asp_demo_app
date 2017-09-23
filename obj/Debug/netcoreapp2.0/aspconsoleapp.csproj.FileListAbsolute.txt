@@ -1,0 +1,10 @@
+C:\Users\AAJ_4\Desktop\aspconsoleapp\bin\Debug\netcoreapp2.0\aspconsoleapp.deps.json
+C:\Users\AAJ_4\Desktop\aspconsoleapp\bin\Debug\netcoreapp2.0\aspconsoleapp.runtimeconfig.json
+C:\Users\AAJ_4\Desktop\aspconsoleapp\bin\Debug\netcoreapp2.0\aspconsoleapp.runtimeconfig.dev.json
+C:\Users\AAJ_4\Desktop\aspconsoleapp\bin\Debug\netcoreapp2.0\aspconsoleapp.dll
+C:\Users\AAJ_4\Desktop\aspconsoleapp\bin\Debug\netcoreapp2.0\aspconsoleapp.pdb
+C:\Users\AAJ_4\Desktop\aspconsoleapp\obj\Debug\netcoreapp2.0\aspconsoleapp.csproj.CoreCompileInputs.cache
+C:\Users\AAJ_4\Desktop\aspconsoleapp\obj\Debug\netcoreapp2.0\aspconsoleapp.AssemblyInfoInputs.cache
+C:\Users\AAJ_4\Desktop\aspconsoleapp\obj\Debug\netcoreapp2.0\aspconsoleapp.AssemblyInfo.cs
+C:\Users\AAJ_4\Desktop\aspconsoleapp\obj\Debug\netcoreapp2.0\aspconsoleapp.dll
+C:\Users\AAJ_4\Desktop\aspconsoleapp\obj\Debug\netcoreapp2.0\aspconsoleapp.pdb

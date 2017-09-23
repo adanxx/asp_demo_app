@@ -1,0 +1,32 @@
+@model IEnumerable<Contact>
+
+@{
+    ViewData["Title"] = "Contact List";
+}
+    <br>
+     <a asp-controller="Contact" asp-action="Create" class="btn btn-primary pull-right">Create New Contact</a>
+    <h1>Contact</h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            @foreach(var contact in @ViewBag.demo)        
+            {
+            <div class="panel panel-default">
+                    <div class="panel-heading">
+                           <strong>@contact.FirstName @contact.LastName</strong>    
+                    </div>
+                
+                <div class="panel-body">
+                      <ul class="list-group">
+                           <li class="list-group-item"><label>PhoneNumber</label>: @contact.PhoneNumber</li>
+                           <li class="list-group-item"><label>EmailAddress</label>: @contact.EmailAddress</li>
+                      </ul>
+                </div>
+
+            </div>
+            }
+           
+        </div>
+    </div>
+        
+
