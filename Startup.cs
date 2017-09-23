@@ -9,6 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 using aspconsoleapp.Services;
 using aspconsoleapp.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
 
 namespace aspconsoleapp
 {
@@ -44,6 +47,10 @@ namespace aspconsoleapp
            services.AddDbContext<ApplicationDbContext>(options =>
            options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddIdentity<IdentityUser, IdentityRole>()
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultTokenProviders();
+
             services.AddMvc();
 
             //services.AddSingleton<IContact, InMemoryContact>(); // Connected to Inmemory Repostory
@@ -63,6 +70,8 @@ namespace aspconsoleapp
             }
 
             app.UseStaticFiles();
+
+            app.UseIdentity();
 
             app.UseMvc(routes =>
             {
