@@ -12624,11 +12624,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AAJ_4\\Desktop\\aspconsoleapp\\aspconsoleapp.csproj",
+      "projectUniqueName": "c:\\Users\\AAJ_4\\Desktop\\aspconsoleapp\\aspconsoleapp.csproj",
       "projectName": "aspconsoleapp",
-      "projectPath": "C:\\Users\\AAJ_4\\Desktop\\aspconsoleapp\\aspconsoleapp.csproj",
+      "projectPath": "c:\\Users\\AAJ_4\\Desktop\\aspconsoleapp\\aspconsoleapp.csproj",
       "packagesPath": "C:\\Users\\AAJ_4\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AAJ_4\\Desktop\\aspconsoleapp\\obj\\",
+      "outputPath": "c:\\Users\\AAJ_4\\Desktop\\aspconsoleapp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

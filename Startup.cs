@@ -71,7 +71,8 @@ namespace aspconsoleapp
 
             app.UseStaticFiles();
 
-            app.UseIdentity();
+             app.UseAuthentication();  //Changed to UserIdentity()
+            //app.UseIdentity();        
 
             app.UseMvc(routes =>
             {

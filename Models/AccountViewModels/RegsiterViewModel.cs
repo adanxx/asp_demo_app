@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace aspconsoleapp.Models.AccountViewModels
 {
-    public class ResgisterViewModel
+    public class RegsiterViewModel
     {
         [Required]
         [EmailAddress]
