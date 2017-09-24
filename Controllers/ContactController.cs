@@ -50,7 +50,8 @@ namespace aspconsoleapp.Controllers
 
         public IActionResult Delete( int id)
         {
-            
+            _contactRepository.DeleteContact(id);
+            return RedirectToAction(nameof(ContactController.List),"Contact");
         }
 
 
