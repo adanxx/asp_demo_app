@@ -49,5 +49,11 @@ namespace aspconsoleapp.Controllers
             return View(regsiterViewModel);
         }       
 
+        [AllowAnonymous]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
     }
 }
