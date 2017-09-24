@@ -27,6 +27,20 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">AddressBook Application</a>
+                
+                <u class= "nav navbar-nav navbar-right">
+                
+                    @if(SignInManager.IsSignedIn(User))
+                    {
+                        <li>
+                            <a asp-controller="Account" asp-action="LogOut"> <span class="glyphicon glyphicon-log-in"></span>LogOut</a>
+                        </li>
+                    }else{
+                        <li>
+                            <a asp-controller="Account" asp-action="Login"><span class="glyphicon glyphicon-log-in"></span>Login</a>
+                        </li>
+                    }
+                </u>
             </div>
           <!--
               

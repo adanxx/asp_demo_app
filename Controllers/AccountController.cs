@@ -72,5 +72,11 @@ namespace aspconsoleapp.Controllers
             return View(loginViewModel);
         }
 
+        public async Task<IActionResult> LogOut()
+        {
+            await _signManager.SignOutAsync();
+            return RedirectToAction(nameof(HomeController.Index), "Home");
+        }
+
     }
 }
