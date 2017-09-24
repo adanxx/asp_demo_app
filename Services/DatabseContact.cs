@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using aspconsoleapp.Models;
 using aspconsoleapp.Data;
+using System.Linq;
 
 namespace aspconsoleapp.Services
 {
@@ -15,12 +16,22 @@ namespace aspconsoleapp.Services
         {
             _dbContext.Contacts.Add(contact);
             _dbContext.SaveChanges();
+        }
 
+        public void DeleteContact(int id)
+        {
+           var contact = _dbContext.Contacts.FirstOrDefault(c => c.id ==id );
+           _dbContext.Contacts.Remove(contact);
+           _dbContext.SaveChanges();
         }
 
         public IEnumerable<Contact> GetallContacts()
         {
            return _dbContext.Contacts; 
         }
+
+        
+
+
     }
 }

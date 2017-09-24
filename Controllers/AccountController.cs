@@ -17,7 +17,6 @@ namespace aspconsoleapp.Controllers
         {
             _userManager = userManager;
             _signManager = signInManager;
-
         }
 
        [AllowAnonymous]     // This enables user to accress this controller to register-page:

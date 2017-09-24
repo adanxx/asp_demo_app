@@ -48,6 +48,11 @@ namespace aspconsoleapp.Controllers
             return View(contact);
         }
 
+        public IActionResult Delete( int id)
+        {
+            
+        }
+
 
 
 

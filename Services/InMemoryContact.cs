@@ -23,13 +23,17 @@ namespace aspconsoleapp.Services
             _contact.Add(contact);
         }
 
+        public void DeleteContact(int id)
+        {
+            var contact = _contact.Find( c => c.id == id);
+            _contact.Remove(contact);
+        }
+
         public IEnumerable<Contact> GetallContacts()
         {
            return _contact;
         }
 
-        
-    
     } 
     
 }
