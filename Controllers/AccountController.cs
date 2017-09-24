@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
+using aspconsoleapp.Models.AccountViewModels;
+using System.Threading.Tasks;
 
 namespace aspconsoleapp.Controllers
 {
@@ -23,10 +25,29 @@ namespace aspconsoleapp.Controllers
        {
            return View();
        }
-              
 
-
-
+        [AllowAnonymous] 
+        [HttpPost]
+        [ValidateAntiForgeryToken] //
+        public async Task<IActionResult> Register(RegsiterViewModel regsiterViewModel)
+        {
+            if(ModelState.IsValid){
+                 var user = new IdentityUser { UserName = regsiterViewModel.EmailAddress, Email= regsiterViewModel.EmailAddress};
+                 var result = await _userManager.CreateAsync(user, regsiterViewModel.Password);
+                 if(result.Succeeded)
+                 {
+                     await _signManager.SignInAsync(user, false);
+                     
+                    return  RedirectToAction(nameof(ContactController.List),"Contact");
+                 }
+                 foreach(var error in result.Errors)
+                 {
+                     ModelState.AddModelError(string.Empty, error.Description);
+                 }
+                  
+            }
+            return View(regsiterViewModel);
+        }       
 
     }
 }

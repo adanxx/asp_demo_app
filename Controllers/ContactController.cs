@@ -33,6 +33,7 @@ namespace aspconsoleapp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]  // Addtional protection for cross-posting
         public IActionResult Create(Contact contact)
         {
             if (ModelState.IsValid)
