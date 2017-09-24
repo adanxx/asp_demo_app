@@ -1,9 +1,11 @@
 using aspconsoleapp.Models;
 using aspconsoleapp.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace aspconsoleapp.Controllers
 {
+    [Authorize]   // Add protection and redicrest unauhorized user to the login-page
     public class ContactController : Controller
     {
         private readonly IContact _contactRepository;
