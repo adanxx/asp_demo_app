@@ -55,5 +55,22 @@ namespace aspconsoleapp.Controllers
             return View();
         }
 
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> Login(LoginViewModel loginViewModel)
+        {
+            if(ModelState.IsValid)
+            {
+                var result = await _signManager.PasswordSignInAsync(loginViewModel.EmailAddress, loginViewModel.Password, false, false);
+                
+                if(result.Succeeded)
+                {
+                    return RedirectToAction(nameof(ContactController.List),"Contact");
+                }
+                ModelState.AddModelError(string.Empty, "Invalid Login attempt");  
+            }
+            return View(loginViewModel);
+        }
+
     }
 }
