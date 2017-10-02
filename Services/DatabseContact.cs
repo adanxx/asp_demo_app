@@ -30,8 +30,9 @@ namespace aspconsoleapp.Services
            return _dbContext.Contacts; 
         }
 
-        
-
-
+        public Contact GetContact(int id)
+        {
+            return _dbContext.Contacts.FirstOrDefault(c => c.id == id);
+        }
     }
 }

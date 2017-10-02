@@ -54,7 +54,15 @@ namespace aspconsoleapp.Controllers
             return RedirectToAction(nameof(ContactController.List),"Contact");
         }
 
+        public IActionResult Edit(int id){
 
+           var contact = _contactRepository.GetContact(id);
+
+           return View(contact);
+
+        }
+
+   
 
 
 

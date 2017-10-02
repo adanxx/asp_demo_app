@@ -8,9 +8,13 @@ namespace aspconsoleapp.Services
     {
      IEnumerable<Contact> GetallContacts();   
 
-     void addContact(Contact contact);  
-     
+      void addContact(Contact contact);    
+      
+      Contact GetContact(int id);
+    
       void DeleteContact(int id);
+    
+
    
     }
 }
