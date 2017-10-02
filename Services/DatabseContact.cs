@@ -34,5 +34,11 @@ namespace aspconsoleapp.Services
         {
             return _dbContext.Contacts.FirstOrDefault(c => c.id == id);
         }
+
+        public void Update(Contact contact)
+        {
+            _dbContext.Contacts.Update(contact);
+            _dbContext.SaveChanges();
+        }
     }
 }

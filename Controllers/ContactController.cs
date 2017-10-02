@@ -54,13 +54,27 @@ namespace aspconsoleapp.Controllers
             return RedirectToAction(nameof(ContactController.List),"Contact");
         }
 
-        public IActionResult Edit(int id){
+        public IActionResult Edit(int id)
+        {
 
            var contact = _contactRepository.GetContact(id);
 
            return View(contact);
 
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Contact contact)
+        {
+            if(ModelState.IsValid)
+            {
+                _contactRepository.
+
+            }
+            return View(contact);
+
+        } 
 
    
 

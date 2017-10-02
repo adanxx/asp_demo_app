@@ -38,6 +38,12 @@ namespace aspconsoleapp.Services
         {
            return _contact.FirstOrDefault(c => c.id ==id);
         }
+
+        public void Update(Contact contact)
+        {
+            var con = _contact.Find( c => c.id == contact.id);
+            _contact[_contact.IndexOf(con)] = contact;
+        }
     } 
     
 }
