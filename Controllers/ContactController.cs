@@ -2,6 +2,7 @@ using aspconsoleapp.Models;
 using aspconsoleapp.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace aspconsoleapp.Controllers
 {
@@ -69,7 +70,9 @@ namespace aspconsoleapp.Controllers
         {
             if(ModelState.IsValid)
             {
-                _contactRepository.
+              _contactRepository.Update(contact);
+
+              return RedirectToAction(nameof(ContactController.List), "Contact");
 
             }
             return View(contact);
