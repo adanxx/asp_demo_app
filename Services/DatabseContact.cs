@@ -20,7 +20,7 @@ namespace aspconsoleapp.Services
 
         public void DeleteContact(int id)
         {
-           var contact = _dbContext.Contacts.FirstOrDefault(c => c.id ==id );
+           var contact = _dbContext.Contacts.FirstOrDefault(c => c.id == id );
            _dbContext.Contacts.Remove(contact);
            _dbContext.SaveChanges();
         }

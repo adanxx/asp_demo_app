@@ -13,7 +13,7 @@
             {
             <div class="panel panel-default">
                     <div class="panel-heading">
-                           <strong>@contact.FirstName @contact.LastName</strong>   
+                           <strong> <a asp-action="Edit" asp-route-id="@contact.id"> @contact.FirstName @contact.LastName</a></strong>   
                            <a asp-action="Delete" asp-route-id="@contact.id" class="btn btn-default pull-right ">
                               <span class="glyphicon glyphicon-trash" aria-hidden="true"> Delete</span>   
                            </a> 
